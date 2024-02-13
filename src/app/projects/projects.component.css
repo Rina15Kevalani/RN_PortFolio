@@ -1,0 +1,110 @@
+.common-heading{
+  margin: 30px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #e74292;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+/* Styles for the project cards */
+.card {
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease;
+  background-color: #fff;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+  box-shadow: 0 6px 12px rgba(165, 163, 243, 0.381);
+  background-color: #b01c1c47;
+}
+
+.card-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.card-text {
+  font-size: 10px;
+  color: #555;
+}
+
+.img-overlay {
+  position: relative;
+  overflow: hidden;
+}
+
+.img-overlay img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.2s ease;
+}
+
+.img-overlay:hover img {
+  transform: scale(1.1);
+}
+
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.overlay a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  background-color: #007bff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: background-color 0.2s ease;
+}
+
+.overlay a:hover {
+  background-color: #0056b3;
+}
+
+.img-overlay:hover .overlay {
+  opacity: 1;
+}
+
+
+.hand-emoji {
+  font-size: 20px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.project-images {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .project-images {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .project-images {
+    grid-template-columns: 1fr;
+  }
+}
